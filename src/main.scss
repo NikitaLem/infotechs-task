@@ -96,6 +96,18 @@ body {
   justify-content: space-around;
   align-items: center;
   display: none;
+
+  button {
+    border: none;
+    border-radius: .8rem;
+    cursor: pointer;
+    color: $primary-txt-color;
+    background-color: $primary-bg-color;
+  }
+
+  button:hover {
+    color: orange;
+  }
 }
 
 .visible-controller {
@@ -144,6 +156,7 @@ body {
     
     div:hover {
       color: orange;
+      background-color: black;
     }
   }
 }
