@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="bundle.css">
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table class="my-table">
         <thead>
             <tr>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Описание</th>
-                <th>Цвет глаз</th>
+                <th class="sorter" data-type="firstName" data-sort="firstName">Имя</th>
+                <th class="sorter" data-type="lastName" data-sort="lastName">Фамилия</th>
+                <th class="sorter" data-type="about" data-sort="about">Описание</th>
+                <th class="sorter" data-type="eyeColor" data-sort="eyeColor">Цвет глаз</th>
             </tr>
         </thead>
         <tbody class="my-table__body"></tbody>
     </table>
+    <div class="edit">
+        <h3>Редактор</h3>
+        <input class="edit__first-name" type="text">
+        <input class="edit__last-name" type="text">
+        <input class="edit__about" type="text">
+        <input class="edit__eye-color" type="text">
+        <div>
+            <button type="button" class="ok">Ok</button>
+            <button type="button" class="cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="visible-controller active">
+        <h3>Контроллер</h3>
+        <label>Имя
+            <input data-type="firstName" class="visible-controller__first-name" type="checkbox" checked>
+        </label>
+        <label>Фамилия
+            <input data-type="lastName" class="visible-controller__last-name" type="checkbox" checked>
+        </label>
+        <label>Описание
+            <input data-type="about" class="visible-controller__about" type="checkbox" checked>
+        </label>
+        <label>Цвет глаз
+            <input data-type="eyeColor" class="visible-controller__eye-color" type="checkbox" checked>
+        </label>
+    </div>
+    <nav class="my-pagination">
+        <div class="container">
+        </div>
+    </nav>
     <script src="main.js"></script>
 </body>
 </html>
